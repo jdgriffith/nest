@@ -64,6 +64,9 @@ export class SseStream extends Transform {
         Expire: '0',
         // NGINX support https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/#x-accel-buffering
         'X-Accel-Buffering': 'no',
+        'Access-Control-Allow-Headers': 'authorization',
+        'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+        'Access-Control-Allow-Origin': '*',
       });
       destination.flushHeaders();
     }
